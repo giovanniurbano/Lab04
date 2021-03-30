@@ -123,7 +123,7 @@ public class CorsoDAO {
 	/*
 	 * Data una matricola ed il codice insegnamento, iscrivi lo studente al corso.
 	 */
-	public boolean iscriviStudenteACorso(Integer matricola, Corso corso) {
+	public int iscriviStudenteACorso(Integer matricola, Corso corso) {
 			final String sql = "INSERT INTO iscrizione (matricola, codins) "
 					+ "VALUES (?, ?)";
 			try {
@@ -132,7 +132,7 @@ public class CorsoDAO {
 				st.setInt(1, matricola);
 				st.setString(2, corso.getCodins());
 				
-				boolean res = st.execute();
+				int res = st.executeUpdate();
 				conn.close();
 				
 				return res;

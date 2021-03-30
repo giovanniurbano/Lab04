@@ -39,7 +39,7 @@ public class Model {
 	public boolean isIscritto(Integer matricola, Corso cors) {
 		return corso.isIscritto(matricola, cors);
 	}
-	public boolean iscriviStudenteACorso(Integer matricola, Corso cors) {
+	public int iscriviStudenteACorso(Integer matricola, Corso cors) {
 		return corso.iscriviStudenteACorso(matricola, cors);
 	}
 }

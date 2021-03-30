@@ -123,8 +123,8 @@ public class FXMLController {
     	if(this.model.isIscritto(matricola, c))
     		txtRisultato.setText("Studente già iscritto al corso");
     	else {
-    		boolean is = this.model.iscriviStudenteACorso(matricola, c);
-    		if(!is)
+    		int is = this.model.iscriviStudenteACorso(matricola, c);
+    		if(is > 0)
     			txtRisultato.setText("Studente iscritto con successo");
     		else
     			txtRisultato.setText("Errore iscrizione");
